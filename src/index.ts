@@ -1,7 +1,7 @@
 import { MatchReader } from './MatchReader';
 import { MatchResult } from './MatchResult';
 
-const reader = new MatchReader('football.csv');
+const reader = new MatchReader('football.csv'); // constructor of abstract class CSV reader expects a filepath to read
 reader.read();
 
 let manUnitedWins = 0;
