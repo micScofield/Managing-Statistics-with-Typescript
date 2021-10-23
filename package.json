@@ -1,5 +1,5 @@
 {
-  "name": "Stats",
+  "name": "stats",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^16.11.4",
     "concurrently": "^6.3.0",
     "nodemon": "^2.0.13"
   }
