@@ -1,5 +1,5 @@
 import { writeFileSync } from "fs";
-import path from "path";
+import { v4 as uuidv4 } from 'uuid';
 import { OutputTarget } from "../Summary";
 
 export class HtmlReport implements OutputTarget {
@@ -11,6 +11,6 @@ export class HtmlReport implements OutputTarget {
         </div>
     `
 
-    writeFileSync('report.html', html)
+    writeFileSync(`report-${uuidv4()}.html`, html)
   }
 }

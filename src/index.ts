@@ -37,7 +37,12 @@ summary.buildAndPrintReport(matchReader.matches)
 
 // Optional
 // A short and sweet approach - 
-new Summary(new WinsAnalysis('Man United'), new ConsoleReport()).buildAndPrintReport(matchReader.matches)
+// new Summary(new WinsAnalysis('Man United'), new ConsoleReport()).buildAndPrintReport(matchReader.matches)
 
 // Generate an HTML Report instead of a ConsoleReport
-new Summary(new WinsAnalysis('Man United'), new HtmlReport()).buildAndPrintReport(matchReader.matches)
+// new Summary(new WinsAnalysis('Man United'), new HtmlReport()).buildAndPrintReport(matchReader.matches)
+
+//Optional 2.0
+// If above chain is also a pain in the ass, we can add static methods to Summary class which gives us pre initialised instances of WinsAnalysis and HtmlReport / ConsoleReport
+Summary.winsAnalysisWithHtmlReport('Man United', matchReader.matches)
+Summary.winsAnalysisWithConsoleReport('Man United', matchReader.matches)
