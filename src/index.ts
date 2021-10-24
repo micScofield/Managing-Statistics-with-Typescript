@@ -1,9 +1,7 @@
 import { WinsAnalysis } from "./analyzers/WinsAnalysis";
 import { CsvFileReader } from "./CsvFileReader";
 import { MatchReader } from "./MatchReader";
-import { MatchResult } from "./MatchResult";
 import { ConsoleReport } from "./reportTargets/ConsoleReport";
-import { HtmlReport } from "./reportTargets/HtmlReport";
 import { Summary } from "./Summary";
 
 // Step 1:
