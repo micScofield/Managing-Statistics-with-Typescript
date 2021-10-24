@@ -46,3 +46,13 @@ summary.buildAndPrintReport(matchReader.matches)
 // If above chain is also a pain in the ass, we can add static methods to Summary class which gives us pre initialised instances of WinsAnalysis and HtmlReport / ConsoleReport
 Summary.winsAnalysisWithHtmlReport('Man United', matchReader.matches)
 Summary.winsAnalysisWithConsoleReport('Man United', matchReader.matches)
+
+// End notes - 
+/*
+Just like we improved Summary with static methods, we can do the same with Match Reader class as well. We can have a static method in there which automatically gives us an instance of CSVFilreader to work with.
+
+const matchReader = MatchReader.fromCsv('football.csv');
+matchReader.load()
+
+Above steps 1 and 2 can be reduced to this.
+*/
