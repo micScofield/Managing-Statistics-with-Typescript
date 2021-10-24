@@ -3,6 +3,7 @@ import { CsvFileReader } from "./CsvFileReader";
 import { MatchReader } from "./MatchReader";
 import { MatchResult } from "./MatchResult";
 import { ConsoleReport } from "./reportTargets/ConsoleReport";
+import { HtmlReport } from "./reportTargets/HtmlReport";
 import { Summary } from "./Summary";
 
 // Step 1:
@@ -33,3 +34,10 @@ consoleReport.print(analysis);
 
 const summary = new Summary(analyzer, consoleReport)
 summary.buildAndPrintReport(matchReader.matches)
+
+// Optional
+// A short and sweet approach - 
+new Summary(new WinsAnalysis('Man United'), new ConsoleReport()).buildAndPrintReport(matchReader.matches)
+
+// Generate an HTML Report instead of a ConsoleReport
+new Summary(new WinsAnalysis('Man United'), new HtmlReport()).buildAndPrintReport(matchReader.matches)
