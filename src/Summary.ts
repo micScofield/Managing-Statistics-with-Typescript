@@ -1,3 +1,4 @@
+import { WinsAnalysis } from "./analyzers/WinsAnalysis";
 import { MatchData } from "./MatchData";
 
 export interface Analyzer {
@@ -11,5 +12,6 @@ export interface OutputTarget {
 export class Summary {
     constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {}
 
-    buildAndPrintReport(): void {}
+    buildAndPrintReport(matches: MatchData[]): void {
+    }
 }

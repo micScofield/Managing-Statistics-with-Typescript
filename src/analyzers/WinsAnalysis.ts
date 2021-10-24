@@ -19,7 +19,6 @@ export class WinsAnalysis implements Analyzer {
       }
     }
 
-    console.log(`${this.teamName} won ${wins} games`);
     return `${this.teamName} won ${wins} games`;
   }
 }
